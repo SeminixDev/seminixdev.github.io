@@ -10,9 +10,9 @@ body {
     background-color: #2b2b2b;
     color: #F1F1F1;
     font-family: 'Hangar';
+    font-size: 22px;
+    -webkit-font-smoothing: none;
     margin-left: 80px;
-    font-size: 20px;
-    font-weight: 0px;
 }
 h1 {
     color:#00FF00;
@@ -21,17 +21,15 @@ h1 {
     margin-bottom: 0px;
 }
 h2 {
-    /* #149414,
-        #0e6b0e,
-        #649568 */
     color: #00FF00;
     font-family: 'Photonico';
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 a {
     font-weight: 0px;
-    color: #a2ffa2
+    text-decoration: none;
+    color: #a2ffa2;
 }
 ol {
     padding-left: 0;
