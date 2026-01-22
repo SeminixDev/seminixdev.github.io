@@ -26,6 +26,7 @@ window.addEventListener('resize', resizeCanvas);
 
 // Characters to use - Mix of ASCII and Japanese-like characters
 const chars = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const RESET_PROBABILITY = 0.975;
 
 function draw() {
     // Semi-transparent black background for trail effect
@@ -61,7 +62,7 @@ function draw() {
         }
         
         // Reset drop to top randomly
-        if (y > height && Math.random() > 0.975) {
+        if (y > height && Math.random() > RESET_PROBABILITY) {
             drops[i] = 0;
         }
         

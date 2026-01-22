@@ -18,8 +18,8 @@ const mouse = {
 };
 
 window.addEventListener('mousemove', (e) => {
-    mouse.x = e.x;
-    mouse.y = e.y;
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
 });
 
 window.addEventListener('mouseout', () => {
@@ -94,7 +94,8 @@ class Particle {
 
 // Create particle array
 const particleArray = [];
-const numberOfParticles = 300;
+// Adaptive particle count based on screen size
+const numberOfParticles = Math.min(300, Math.floor((window.innerWidth * window.innerHeight) / 5000));
 
 function init() {
     particleArray.length = 0;

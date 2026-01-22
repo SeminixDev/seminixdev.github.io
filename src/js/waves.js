@@ -57,7 +57,10 @@ class Ripple {
 
 // Mouse click handler
 canvas.addEventListener('click', (e) => {
-    ripples.push(new Ripple(e.clientX, e.clientY));
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    ripples.push(new Ripple(x, y));
 });
 
 // Draw sine wave
