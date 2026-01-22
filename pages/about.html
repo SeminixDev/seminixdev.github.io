@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SeminixDev</title>
+    
+    <link rel="stylesheet" href="../src/css/default.css" />
+    <link rel="stylesheet" href="../src/css/nav.css" />
+    <style>
+        .about-container {
+            padding-top: 120px;
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #00FF00;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #001100, #003300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.4);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .info-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 2px solid #00FF00;
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 0, 0.3);
+        }
+        
+        .info-card h3 {
+            color: #00FF00;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-family: 'Photonico', sans-serif;
+        }
+        
+        .info-card p {
+            color: #a0a0a0;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tag {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00FF00;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #00FF00;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .contact-btn {
+            padding: 12px 30px;
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid #00FF00;
+            border-radius: 8px;
+            color: #00FF00;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            background: #00FF00;
+            color: #0a0a0a;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-text">SeminixDev</span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="shader.html" class="nav-link">Shader</a></li>
+            <li class="nav-item"><a href="particles.html" class="nav-link">Particles</a></li>
+            <li class="nav-item"><a href="waves.html" class="nav-link">Waves</a></li>
+            <li class="nav-item"><a href="matrix.html" class="nav-link">Matrix</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div class="container about-container">
+        <div class="profile-section">
+            <div class="profile-avatar">👨‍💻</div>
+            <h1>Piotr Moskala</h1>
+            <p class="subtitle">@SeminixDev</p>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>📚 Education</h3>
+                <p>MEng Computer Science for Games Programming</p>
+                <p>University of Hull</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>💻 Interests</h3>
+                <p>Game Development</p>
+                <p>Graphics Programming</p>
+                <p>Web Technologies</p>
+                <p>Shader Programming</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>🛠️ Technologies</h3>
+                <div class="tech-tags">
+                    <span class="tag">WebGL</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">Canvas API</span>
+                    <span class="tag">GLSL</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-links">
+            <a href="https://github.com/SeminixDev" class="contact-btn" target="_blank">GitHub</a>
+            <a href="https://seminix.itch.io/?=githubportfolio" class="contact-btn" target="_blank">Itch.io</a>
+        </div>
+    </div>
+
+    <div class="background-animation"></div>
+
+    <script src="../src/js/nav.js"></script>
+</body>
+
+</html>
