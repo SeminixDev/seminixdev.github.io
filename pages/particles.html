@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particles - SeminixDev</title>
+    
+    <link rel="stylesheet" href="../src/css/default.css" />
+    <link rel="stylesheet" href="../src/css/nav.css" />
+    <style>
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: #0a0a0a;
+        }
+        
+        .particle-container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding-top: 150px;
+            pointer-events: none;
+        }
+        
+        .particle-container h1 {
+            text-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-text">SeminixDev</span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="shader.html" class="nav-link">Shader</a></li>
+            <li class="nav-item"><a href="particles.html" class="nav-link active">Particles</a></li>
+            <li class="nav-item"><a href="waves.html" class="nav-link">Waves</a></li>
+            <li class="nav-item"><a href="matrix.html" class="nav-link">Matrix</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="particle-container">
+        <div class="container">
+            <h1>Particle System</h1>
+            <p class="description">Interactive particles that respond to your mouse</p>
+        </div>
+    </div>
+
+    <script src="../src/js/nav.js"></script>
+    <script src="../src/js/particles.js"></script>
+</body>
+
+</html>

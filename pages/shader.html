@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shader Effects - SeminixDev</title>
+    
+    <link rel="stylesheet" href="../src/css/default.css" />
+    <link rel="stylesheet" href="../src/css/nav.css" />
+    <style>
+        #shaderCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .shader-container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding-top: 150px;
+        }
+        
+        .shader-controls {
+            background: rgba(10, 10, 10, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #00FF00;
+            max-width: 500px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+        }
+        
+        .control-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .control-group label {
+            display: block;
+            color: #00FF00;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            border-radius: 5px;
+            background: #1a1a1a;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #00FF00;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #00FF00;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            border: none;
+        }
+        
+        .value-display {
+            color: #a0a0a0;
+            font-size: 14px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-text">SeminixDev</span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="shader.html" class="nav-link active">Shader</a></li>
+            <li class="nav-item"><a href="particles.html" class="nav-link">Particles</a></li>
+            <li class="nav-item"><a href="waves.html" class="nav-link">Waves</a></li>
+            <li class="nav-item"><a href="matrix.html" class="nav-link">Matrix</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <canvas id="shaderCanvas"></canvas>
+
+    <div class="shader-container">
+        <div class="container">
+            <h1>WebGL Shader</h1>
+            <p class="description">Interactive fragment shader with customizable parameters</p>
+            
+            <div class="shader-controls">
+                <div class="control-group">
+                    <label>
+                        Color Intensity
+                        <span class="value-display" id="intensityValue">1.0</span>
+                    </label>
+                    <input type="range" id="intensity" min="0" max="2" step="0.1" value="1.0">
+                </div>
+                
+                <div class="control-group">
+                    <label>
+                        Animation Speed
+                        <span class="value-display" id="speedValue">1.0</span>
+                    </label>
+                    <input type="range" id="speed" min="0.1" max="3" step="0.1" value="1.0">
+                </div>
+                
+                <div class="control-group">
+                    <label>
+                        Complexity
+                        <span class="value-display" id="complexityValue">3.0</span>
+                    </label>
+                    <input type="range" id="complexity" min="1" max="8" step="0.5" value="3.0">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/js/nav.js"></script>
+    <script src="../src/js/shader.js"></script>
+</body>
+
+</html>
