@@ -3,23 +3,22 @@
  * Persists preference in localStorage.
  */
 (function () {
-  const STORAGE_KEY = "theme";
-  const DARK = "dark";
-  const LIGHT = "light";
+  var STORAGE_KEY = "theme";
+  var DARK = "dark";
+  var LIGHT = "light";
 
   function getPreferred() {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    var stored = localStorage.getItem(STORAGE_KEY);
     if (stored === DARK || stored === LIGHT) return stored;
     return window.matchMedia("(prefers-color-scheme: light)").matches
       ? LIGHT
       : DARK;
   }
 
-  function apply(theme) {
+  function apply(theme, btn) {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem(STORAGE_KEY, theme);
 
-    var btn = document.getElementById("theme-toggle");
     if (btn) {
       btn.textContent = theme === DARK ? "☀️ Light" : "🌙 Dark";
       btn.setAttribute("aria-label", "Switch to " + (theme === DARK ? "light" : "dark") + " mode");
@@ -27,17 +26,17 @@
   }
 
   // Apply immediately (before paint) so there is no flash
-  apply(getPreferred());
+  apply(getPreferred(), null);
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Re-apply to update button text once DOM is ready
-    apply(getPreferred());
-
     var btn = document.getElementById("theme-toggle");
+    // Re-apply to update button text now that DOM is ready
+    apply(getPreferred(), btn);
+
     if (btn) {
       btn.addEventListener("click", function () {
         var current = document.documentElement.getAttribute("data-theme");
-        apply(current === DARK ? LIGHT : DARK);
+        apply(current === DARK ? LIGHT : DARK, btn);
       });
     }
   });

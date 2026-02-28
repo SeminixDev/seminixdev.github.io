@@ -1,4 +1,13 @@
 /**
+ * Escape a string for safe insertion into HTML.
+ */
+function escapeHTML(str) {
+  var div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+/**
  * Renders project cards into a container element.
  *
  * @param {string} containerId  – id of the target element
@@ -17,44 +26,74 @@ function renderProjects(containerId, featuredOnly) {
     return;
   }
 
-  var html = "";
+  var fragment = document.createDocumentFragment();
+
   for (var i = 0; i < list.length; i++) {
     var p = list[i];
-    html += "<article class='project-card'>";
+    var card = document.createElement("article");
+    card.className = "project-card";
 
     // Thumbnail
     if (p.image) {
-      html += "<img class='project-card__img' src='" + p.image + "' alt='" + p.title + " screenshot'>";
+      var img = document.createElement("img");
+      img.className = "project-card__img";
+      img.src = p.image;
+      img.alt = p.title + " screenshot";
+      card.appendChild(img);
     } else {
-      html += "<div class='project-card__placeholder'>&lt;/&gt;</div>";
+      var placeholder = document.createElement("div");
+      placeholder.className = "project-card__placeholder";
+      placeholder.textContent = "</>";
+      card.appendChild(placeholder);
     }
 
-    html += "<div class='project-card__body'>";
-    html += "<h3 class='project-card__title'>" + p.title + "</h3>";
-    html += "<p class='project-card__desc'>" + p.description + "</p>";
+    var body = document.createElement("div");
+    body.className = "project-card__body";
+
+    var title = document.createElement("h3");
+    title.className = "project-card__title";
+    title.textContent = p.title;
+    body.appendChild(title);
+
+    var desc = document.createElement("p");
+    desc.className = "project-card__desc";
+    desc.textContent = p.description;
+    body.appendChild(desc);
 
     // Tags
     if (p.tags && p.tags.length) {
-      html += "<div class='project-card__tags'>";
+      var tagsDiv = document.createElement("div");
+      tagsDiv.className = "project-card__tags";
       for (var t = 0; t < p.tags.length; t++) {
-        html += "<span class='tag'>" + p.tags[t] + "</span>";
+        var tag = document.createElement("span");
+        tag.className = "tag";
+        tag.textContent = p.tags[t];
+        tagsDiv.appendChild(tag);
       }
-      html += "</div>";
+      body.appendChild(tagsDiv);
     }
 
     // Links
     if (p.links) {
-      html += "<div class='project-card__links'>";
+      var linksDiv = document.createElement("div");
+      linksDiv.className = "project-card__links";
       var keys = Object.keys(p.links);
       for (var k = 0; k < keys.length; k++) {
         var name = keys[k];
-        html += "<a href='" + p.links[name] + "' target='_blank' rel='noopener noreferrer'>" + name + "</a>";
+        var a = document.createElement("a");
+        a.href = p.links[name];
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = name;
+        linksDiv.appendChild(a);
       }
-      html += "</div>";
+      body.appendChild(linksDiv);
     }
 
-    html += "</div></article>";
+    card.appendChild(body);
+    fragment.appendChild(card);
   }
 
-  container.innerHTML = html;
+  container.innerHTML = "";
+  container.appendChild(fragment);
 }
