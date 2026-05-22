@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects — Piotr Moskala</title>
-    <meta name="description" content="All projects by Piotr Moskala — games, engines, and tools. Filterable by category.">
+    <title>Cleanse Me To Freedom — Piotr Moskala</title>
+    <meta name="description" content="Cleanse Me To Freedom — a twin-stick boomer shooter made for Arcademia Jam 2026 (theme: Pandora's Box).">
+    <base href="../">
     <link rel="stylesheet" href="src/css/default.css">
     <script src="src/js/theme.js"></script>
 </head>
 
 <body>
 
-    <!-- ===== Navbar ===== -->
     <nav class="navbar" aria-label="Main navigation">
         <a href="index.html" class="navbar__brand">&lt;SeminixDev /&gt;</a>
         <ul class="navbar__links">
@@ -24,17 +24,8 @@
         </ul>
     </nav>
 
-    <!-- ===== All Projects ===== -->
-    <section class="container">
-        <h1 class="section-title" style="margin-top:2rem;">// All Projects</h1>
+    <main id="project-detail" data-project-id="cleanse-me-to-freedom"></main>
 
-        <!-- Category filter tabs -->
-        <div id="filter-tabs" class="filter-tabs" role="group" aria-label="Filter projects by category"></div>
-
-        <div id="all-projects" class="project-grid"></div>
-    </section>
-
-    <!-- ===== Footer ===== -->
     <footer class="footer">
         <p>&lt;/&gt; Built by Piotr Moskala &middot;
             <a href="https://www.linkedin.com/in/moskala-piotr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -42,12 +33,10 @@
     </footer>
 
     <script src="src/data/projects.js"></script>
-    <script src="src/js/carousel.js"></script>
-    <script src="src/js/gallery.js"></script>
-    <script>
-        renderFilterTabs("filter-tabs", "all-projects");
-        renderProjects("all-projects", false);
-    </script>
+    <script src="src/data/posts.js"></script>
+    <script src="src/js/lightbox.js"></script>
+    <script src="src/js/blog.js"></script>
+    <script src="src/js/project-page.js"></script>
 </body>
 
 </html>

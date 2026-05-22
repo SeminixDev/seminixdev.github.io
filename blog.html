@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects — Piotr Moskala</title>
-    <meta name="description" content="All projects by Piotr Moskala — games, engines, and tools. Filterable by category.">
+    <title>Blog — Piotr Moskala</title>
+    <meta name="description" content="Development blog by Piotr Moskala — devlogs, technical write-ups, and game jam retrospectives.">
     <link rel="stylesheet" href="src/css/default.css">
     <script src="src/js/theme.js"></script>
 </head>
@@ -24,14 +24,10 @@
         </ul>
     </nav>
 
-    <!-- ===== All Projects ===== -->
+    <!-- ===== Blog listing ===== -->
     <section class="container">
-        <h1 class="section-title" style="margin-top:2rem;">// All Projects</h1>
-
-        <!-- Category filter tabs -->
-        <div id="filter-tabs" class="filter-tabs" role="group" aria-label="Filter projects by category"></div>
-
-        <div id="all-projects" class="project-grid"></div>
+        <h1 class="section-title" style="margin-top:2rem;">// Blog</h1>
+        <div id="all-posts" class="blog-grid"></div>
     </section>
 
     <!-- ===== Footer ===== -->
@@ -42,12 +38,9 @@
     </footer>
 
     <script src="src/data/projects.js"></script>
-    <script src="src/js/carousel.js"></script>
-    <script src="src/js/gallery.js"></script>
-    <script>
-        renderFilterTabs("filter-tabs", "all-projects");
-        renderProjects("all-projects", false);
-    </script>
+    <script src="src/data/posts.js"></script>
+    <script src="src/js/blog.js"></script>
+    <script>renderPosts("all-posts");</script>
 </body>
 
 </html>

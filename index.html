@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piotr Moskala — Portfolio</title>
+    <meta name="description" content="Portfolio of Piotr Moskala — games programmer and software engineer specialising in real-time systems and graphics. MEng Computer Science graduate.">
     <link rel="stylesheet" href="src/css/default.css">
     <script src="src/js/theme.js"></script>
 </head>
@@ -17,7 +18,8 @@
         <ul class="navbar__links">
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <!-- Add more links here as you expand your site -->
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
             <li><button id="theme-toggle" type="button" aria-label="Toggle theme">☀️ Light</button></li>
         </ul>
     </nav>
@@ -25,12 +27,16 @@
     <!-- ===== Hero ===== -->
     <header class="hero">
         <h1>Piotr Moskala</h1>
-        <p>Studying MEng Computer Science for Games Programming at the University of Hull</p>
+        <p>
+            Games Programmer &amp; Software Engineer<br>
+            Specialising in real-time systems and graphics.<br>
+            First-Class Honours MEng Computer Science for Games Programming.
+        </p>
 
         <ul class="social-links">
             <li><a href="https://github.com/SeminixDev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://seminix.itch.io/?=githubportfolio" target="_blank" rel="noopener noreferrer">Itch.io</a></li>
-            <!-- Add more social/profile links here -->
+            <li><a href="https://www.linkedin.com/in/moskala-piotr/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
     </header>
 
@@ -38,17 +44,32 @@
     <section class="container">
         <h2 class="section-title">// Featured Projects</h2>
         <div id="featured-projects" class="project-grid"></div>
-        <p style="margin-top:1.25rem;"><a href="projects.html">View all projects →</a></p>
+        <p style="margin-top:1.25rem;"><a href="projects.html">View all projects &rarr;</a></p>
+    </section>
+
+    <!-- ===== Latest Posts ===== -->
+    <section class="container" style="padding-top:0;">
+        <h2 class="section-title">// Latest Posts</h2>
+        <div id="latest-posts" class="blog-grid"></div>
+        <p style="margin-top:1.25rem;"><a href="blog.html">View all posts &rarr;</a></p>
     </section>
 
     <!-- ===== Footer ===== -->
     <footer class="footer">
-        <p>&lt;/&gt; Built by Piotr Moskala</p>
+        <p>&lt;/&gt; Built by Piotr Moskala &middot;
+            <a href="https://www.linkedin.com/in/moskala-piotr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
     </footer>
 
     <script src="src/data/projects.js"></script>
+    <script src="src/data/posts.js"></script>
+    <script src="src/js/carousel.js"></script>
     <script src="src/js/gallery.js"></script>
-    <script>renderProjects("featured-projects", true);</script>
+    <script src="src/js/blog.js"></script>
+    <script>
+        renderProjects("featured-projects", true);
+        renderPosts("latest-posts", { limit: 3 });
+    </script>
 </body>
 
 </html>
