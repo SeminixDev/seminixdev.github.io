@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piotr Moskala — Portfolio</title>
+    <title>Projects — Piotr Moskala</title>
     <link rel="stylesheet" href="src/css/default.css">
     <script src="src/js/theme.js"></script>
 </head>
@@ -22,23 +22,10 @@
         </ul>
     </nav>
 
-    <!-- ===== Hero ===== -->
-    <header class="hero">
-        <h1>Piotr Moskala</h1>
-        <p>Studying MEng Computer Science for Games Programming at the University of Hull</p>
-
-        <ul class="social-links">
-            <li><a href="https://github.com/SeminixDev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://seminix.itch.io/?=githubportfolio" target="_blank" rel="noopener noreferrer">Itch.io</a></li>
-            <!-- Add more social/profile links here -->
-        </ul>
-    </header>
-
-    <!-- ===== Featured Projects ===== -->
+    <!-- ===== All Projects ===== -->
     <section class="container">
-        <h2 class="section-title">// Featured Projects</h2>
-        <div id="featured-projects" class="project-grid"></div>
-        <p style="margin-top:1.25rem;"><a href="projects.html">View all projects →</a></p>
+        <h2 class="section-title" style="margin-top:2rem;">// All Projects</h2>
+        <div id="all-projects" class="project-grid"></div>
     </section>
 
     <!-- ===== Footer ===== -->
@@ -48,7 +35,7 @@
 
     <script src="src/data/projects.js"></script>
     <script src="src/js/gallery.js"></script>
-    <script>renderProjects("featured-projects", true);</script>
+    <script>renderProjects("all-projects", false);</script>
 </body>
 
 </html>
