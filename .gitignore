@@ -14,8 +14,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Editor directories
-.vscode/
+# Editor — commit .vscode config (tasks, settings, extensions)
 .idea/
 
 # npm/pnpm lockfiles are fine to commit, but ignore caches
