@@ -1,0 +1,95 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Portfolio of Piotr Moskala — games programmer and software engineer specialising in real-time systems and graphics.',
+} = Astro.props;
+
+const pageTitle = title === 'Piotr Moskala'
+  ? 'Piotr Moskala — Portfolio'
+  : `${title} — Piotr Moskala`;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <!-- Theme runs before paint to prevent flash of wrong theme -->
+    <script is:inline>
+      (function () {
+        var STORAGE_KEY = "theme";
+        var DARK = "dark";
+        var LIGHT = "light";
+        function getPreferred() {
+          var stored = localStorage.getItem(STORAGE_KEY);
+          if (stored === DARK || stored === LIGHT) return stored;
+          return window.matchMedia("(prefers-color-scheme: light)").matches ? LIGHT : DARK;
+        }
+        document.documentElement.setAttribute("data-theme", getPreferred());
+      })();
+    </script>
+  </head>
+  <body>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="/" class="navbar__brand">&lt;SeminixDev /&gt;</a>
+      <ul class="navbar__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about">About</a></li>
+        <li>
+          <button id="theme-toggle" type="button" aria-label="Toggle theme">☀️ Light</button>
+        </li>
+      </ul>
+    </nav>
+
+    <slot />
+
+    <footer class="footer">
+      <p>
+        &lt;/&gt; Built by Piotr Moskala &middot;
+        <a href="https://www.linkedin.com/in/moskala-piotr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </footer>
+
+    <!-- Theme toggle interaction (runs after DOM is ready) -->
+    <script is:inline>
+      (function () {
+        var STORAGE_KEY = "theme";
+        var DARK = "dark";
+        var LIGHT = "light";
+        function apply(theme, btn) {
+          document.documentElement.setAttribute("data-theme", theme);
+          localStorage.setItem(STORAGE_KEY, theme);
+          if (btn) {
+            btn.textContent = theme === DARK ? "☀️ Light" : "🌙 Dark";
+            btn.setAttribute("aria-label", "Switch to " + (theme === DARK ? "light" : "dark") + " mode");
+          }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+          var stored = localStorage.getItem(STORAGE_KEY);
+          var theme = (stored === DARK || stored === LIGHT)
+            ? stored
+            : (window.matchMedia("(prefers-color-scheme: light)").matches ? LIGHT : DARK);
+          var btn = document.getElementById("theme-toggle");
+          apply(theme, btn);
+          if (btn) {
+            btn.addEventListener("click", function () {
+              var current = document.documentElement.getAttribute("data-theme");
+              apply(current === DARK ? LIGHT : DARK, btn);
+            });
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

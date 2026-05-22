@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  projectTitle?: string;
+}
+
+const { post, projectTitle } = Astro.props;
+const { data, id } = post;
+
+const formattedDate = new Date(data.date + 'T00:00:00').toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<a href={`/blog/${id}`} class="blog-card" aria-label={data.title}>
+  <div class="blog-card__accent"></div>
+  <div class="blog-card__body">
+    <p class="blog-card__date">{formattedDate}</p>
+    <h3 class="blog-card__title">{data.title}</h3>
+    <p class="blog-card__summary">{data.summary}</p>
+
+    {data.tags.length > 0 && (
+      <div class="project-card__tags">
+        {data.tags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+    )}
+
+    {projectTitle && (
+      <p class="blog-card__project-link">&#8627; {projectTitle}</p>
+    )}
+  </div>
+</a>

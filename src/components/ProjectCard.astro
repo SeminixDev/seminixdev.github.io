@@ -1,0 +1,76 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { data, id } = project;
+
+function formatDate(dateStr: string): string {
+  const d = new Date(dateStr + '-01');
+  return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+}
+
+const meta = [data.role, data.date ? formatDate(data.date) : ''].filter(Boolean).join(' · ');
+---
+
+<article class="project-card" data-category={data.category}>
+  <!-- Stretched link makes the whole card navigate to the detail page -->
+  <a href={`/projects/${id}`} class="stretched-link" aria-label={data.title}></a>
+
+  {data.images.length === 0 ? (
+    <div class="project-card__placeholder">&lt;/&gt;</div>
+  ) : data.images.length === 1 ? (
+    <img
+      class="project-card__img"
+      src={data.images[0]}
+      alt={`${data.title} screenshot`}
+      loading="lazy"
+    />
+  ) : (
+    <div class="project-card__carousel">
+      {data.images.map((img, i) => (
+        <img
+          class="carousel-img"
+          src={img}
+          alt={`${data.title} screenshot ${i + 1}`}
+          loading="lazy"
+        />
+      ))}
+      <button class="carousel-arrow prev" type="button" aria-label="Previous image">&#8592;</button>
+      <button class="carousel-arrow next" type="button" aria-label="Next image">&#8594;</button>
+      <div class="carousel-dots">
+        {data.images.map((_img) => <span class="carousel-dot"></span>)}
+      </div>
+    </div>
+  )}
+
+  <div class="project-card__body">
+    <h3 class="project-card__title">{data.title}</h3>
+    {meta && <p class="project-card__meta">{meta}</p>}
+    <p class="project-card__desc">{data.description}</p>
+
+    {data.tags.length > 0 && (
+      <div class="project-card__tags">
+        {data.tags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+    )}
+
+    {Object.keys(data.links).length > 0 && (
+      <div class="project-card__links">
+        {Object.entries(data.links).map(([name, url]) => (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card__ext-link"
+          >
+            {name}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</article>

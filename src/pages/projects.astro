@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const allProjects = await getCollection('projects');
+
+// Sort newest first
+const projects = allProjects.sort((a, b) => b.data.date.localeCompare(a.data.date));
+
+const tabs = [
+  { label: 'All',             value: 'all'    },
+  { label: 'Games',           value: 'game'   },
+  { label: 'Engines & Tools', value: 'engine' },
+  { label: 'Web',             value: 'web'    },
+];
+---
+
+<BaseLayout
+  title="Projects"
+  description="All projects by Piotr Moskala — games, engines, and tools. Filterable by category."
+>
+  <section class="container">
+    <h1 class="section-title" style="margin-top:2rem;">// All Projects</h1>
+
+    <!-- Category filter tabs -->
+    <div class="filter-tabs" role="group" aria-label="Filter projects by category">
+      {tabs.map((tab) => (
+        <button
+          class={`filter-tab${tab.value === 'all' ? ' active' : ''}`}
+          type="button"
+          data-value={tab.value}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+
+    <!-- All cards rendered server-side; filter.js shows/hides them -->
+    <div class="project-grid" id="project-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <script is:inline src="/scripts/carousel.js"></script>
+  <script is:inline src="/scripts/filter.js"></script>
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof initCarousels === 'function') initCarousels();
+    });
+  </script>
+</BaseLayout>
