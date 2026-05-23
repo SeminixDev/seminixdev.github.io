@@ -31,5 +31,32 @@
         "close": false
       }
     },
+    {
+      "label": "Build & Preview",
+      "type": "shell",
+      "command": "npm run build && npm run preview",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "astro-preview",
+        "pattern": {
+          "regexp": "^(.*)$",
+          "file": 1,
+          "message": 1
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "astro",
+          "endsPattern": "Local"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "devserver",
+        "focus": false,
+        "close": false
+      }
+    }
   ]
 }
