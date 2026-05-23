@@ -1,10 +1,12 @@
 /**
  * Image Carousel
  * --------------
- * Initialises auto-advancing image carousels on project cards.
- * Call initCarousels() after project cards have been injected into the DOM.
+ * Auto-scrolls only while the user hovers over the card.
+ * Resets to the first image when the user moves away.
+ * Arrow clicks pause auto-scroll for the current hover session;
+ * the next hover starts fresh from image 0.
  *
- * Expects each carousel to have the structure produced by gallery.js:
+ * Expects each carousel to have the structure produced by ProjectCard.astro:
  *   .project-card__carousel
  *     img.carousel-img (×N)
  *     button.carousel-arrow.prev
@@ -13,21 +15,21 @@
  *       span.carousel-dot (×N)
  */
 (function () {
-  var AUTO_INTERVAL_MS = 4000;
+  var AUTO_INTERVAL_MS = 1200;
 
   function initCarousel(el) {
     var imgs = el.querySelectorAll(".carousel-img");
     if (!imgs || imgs.length < 2) {
-      // Single image or empty — just mark first active, no behaviour needed
       if (imgs && imgs.length === 1) imgs[0].classList.add("active");
       return;
     }
 
-    var dots  = el.querySelectorAll(".carousel-dot");
-    var prev  = el.querySelector(".carousel-arrow.prev");
-    var next  = el.querySelector(".carousel-arrow.next");
+    var dots    = el.querySelectorAll(".carousel-dot");
+    var prev    = el.querySelector(".carousel-arrow.prev");
+    var next    = el.querySelector(".carousel-arrow.next");
     var current = 0;
     var timer   = null;
+    var paused  = false; // true after user manually clicks an arrow this hover session
 
     function goTo(i) {
       imgs[current].classList.remove("active");
@@ -37,21 +39,29 @@
       if (dots[current]) dots[current].classList.add("active");
     }
 
-    function startTimer() {
+    function startAutoScroll() {
+      clearInterval(timer);
       timer = setInterval(function () { goTo(current + 1); }, AUTO_INTERVAL_MS);
     }
 
-    function resetTimer() {
+    function stopAutoScroll() {
       clearInterval(timer);
-      startTimer();
+      timer = null;
+    }
+
+    function resetToFirst() {
+      stopAutoScroll();
+      goTo(0);
+      paused = false;
     }
 
     if (prev) {
       prev.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
+        paused = true;
+        stopAutoScroll();
         goTo(current - 1);
-        resetTimer();
       });
     }
 
@@ -59,30 +69,28 @@
       next.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
+        paused = true;
+        stopAutoScroll();
         goTo(current + 1);
-        resetTimer();
       });
     }
 
-    for (var d = 0; d < dots.length; d++) {
-      (function (idx) {
-        dots[idx].addEventListener("click", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          goTo(idx);
-          resetTimer();
-        });
-      })(d);
-    }
+    // Attach hover to the whole card so the arrows don't feel like a dead zone
+    var card = el.closest(".project-card") || el;
 
-    // Pause auto-advance while user hovers
-    el.addEventListener("mouseenter", function () { clearInterval(timer); });
-    el.addEventListener("mouseleave", startTimer);
+    card.addEventListener("mouseenter", function () {
+      goTo(0);
+      paused = false;
+      startAutoScroll();
+    });
 
-    // Initialise first frame
+    card.addEventListener("mouseleave", function () {
+      resetToFirst();
+    });
+
+    // Initialise first frame — no auto-scroll until hover
     imgs[0].classList.add("active");
     if (dots[0]) dots[0].classList.add("active");
-    startTimer();
   }
 
   function initCarousels() {
@@ -93,4 +101,4 @@
   }
 
   window.initCarousels = initCarousels;
-})();
+}());
