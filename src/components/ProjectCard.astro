@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -23,20 +24,24 @@ const meta = [data.role, data.date ? formatDate(data.date) : ''].filter(Boolean)
   {data.images.length === 0 ? (
     <div class="project-card__placeholder">&lt;/&gt;</div>
   ) : data.images.length === 1 ? (
-    <img
+    <Image
       class="project-card__img"
       src={data.images[0]}
       alt={`${data.title} screenshot`}
+      width={600}
+      height={360}
       loading="lazy"
     />
   ) : (
     <div class="project-card__carousel">
       {data.images.map((img, i) => (
-        <img
+        <Image
           class="carousel-img"
           src={img}
           alt={`${data.title} screenshot ${i + 1}`}
-          loading="lazy"
+          width={600}
+          height={360}
+          loading={i === 0 ? "eager" : "lazy"}
         />
       ))}
       <button class="carousel-arrow prev" type="button" aria-label="Previous image">&#8592;</button>

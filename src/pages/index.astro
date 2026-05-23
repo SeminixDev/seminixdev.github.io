@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
@@ -27,16 +28,32 @@ const projectMap = Object.fromEntries(allProjects.map((p) => [p.id, p.data.title
 >
   <!-- Hero -->
   <header class="hero">
-    <h1>Piotr Moskala</h1>
-    <p>
-      Games Programmer &amp; Software Engineer<br />
-      First-Class Honours MEng Computer Science for Games Programming
-    </p>
-    <ul class="social-links">
-      <li><a href="https://github.com/SeminixDev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://seminix.itch.io/?=githubportfolio" target="_blank" rel="noopener noreferrer">Itch.io</a></li>
-      <li><a href="https://www.linkedin.com/in/moskala-piotr/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-    </ul>
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <h1>Piotr Moskala</h1>
+          <p>
+            Games Programmer &amp; Software Engineer<br />
+            First-Class Honours MEng Computer Science for Games Programming
+          </p>
+          <ul class="social-links">
+            <li><a href="https://github.com/SeminixDev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://seminix.itch.io/?=githubportfolio" target="_blank" rel="noopener noreferrer">Itch.io</a></li>
+            <li><a href="https://www.linkedin.com/in/moskala-piotr/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="hero__photo">
+          <Image
+            src="/assets/me.jpg"
+            alt="Piotr Moskala"
+            class="hero__portrait"
+            width={600}
+            height={430}
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- Featured Projects -->
