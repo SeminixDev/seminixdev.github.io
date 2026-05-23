@@ -6,7 +6,7 @@ tags: [Astro, HTML, CSS, JavaScript, TypeScript]
 category: web
 role: Solo
 date: "2026-05"
-images: []
+images: ["/assets/projects/pw1.png"]
 video: ""
 links:
   github: https://github.com/SeminixDev/seminixdev.github.io
