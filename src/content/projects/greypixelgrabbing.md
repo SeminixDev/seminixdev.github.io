@@ -6,7 +6,7 @@ tags: [MonoGame, C#, Game Jam, Platformer]
 category: game
 role: Programmer (team of 4)
 date: "2025-11"
-images: []
+images: ["/assets/projects/gpg1.png"]
 video: ""
 links:
   itch: https://graymakesgame.itch.io/greypixelgrabbing

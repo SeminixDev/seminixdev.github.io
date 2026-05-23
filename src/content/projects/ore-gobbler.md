@@ -6,7 +6,7 @@ tags: [Unity, C#, Game Jam, Mining, Strategy]
 category: game
 role: Programmer (team of 6, Beetroot Studios)
 date: "2021-11"
-images: []
+images: ["/assets/projects/og1.jpg"]
 video: ""
 links:
   itch: https://beetrootgames.itch.io/ore-gobbler

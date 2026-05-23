@@ -6,7 +6,7 @@ tags: [Unity, C#, Game Jam, Fighter, Side-Scroller]
 category: game
 role: Programmer (team of 6, Beetroot Studios)
 date: "2022-03"
-images: []
+images: ["/assets/projects/prawn1.png", "/assets/projects/prawn2.png", "/assets/projects/prawn3.png"]
 video: ""
 links:
   itch: https://beetrootgames.itch.io/prawnagedon

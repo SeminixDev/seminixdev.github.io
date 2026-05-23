@@ -6,7 +6,7 @@ tags: [Godot, GDScript, Game Jam, Shooter, Twin-Stick]
 category: game
 role: Programmer (team of 2)
 date: "2026-03"
-images: []
+images: ["/assets/projects/cmtf1.png"]
 video: ""
 links:
   itch: https://usagidvv.itch.io/cleansemetofreedom

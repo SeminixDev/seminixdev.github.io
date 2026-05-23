@@ -6,7 +6,7 @@ tags: [Unity, C#, Shooter]
 category: game
 role: Solo
 date: "2020-05"
-images: []
+images: ["/assets/projects/sps1.png", "/assets/projects/sps2.png", "/assets/projects/sps3.png"]
 video: ""
 links:
   itch: https://seminix.itch.io/space-pace-shooter

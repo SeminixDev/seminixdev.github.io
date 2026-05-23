@@ -6,7 +6,7 @@ tags: [Unity, C#, Game Jam, Puzzle, Top-Down]
 category: game
 role: Solo
 date: "2020-07"
-images: []
+images: ["/assets/projects/oos1.png", "/assets/projects/oos2.png", "/assets/projects/oos3.png", "/assets/projects/oos4.png"]
 video: ""
 links:
   itch: https://seminix.itch.io/out-of-sight

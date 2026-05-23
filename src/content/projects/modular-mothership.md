@@ -6,7 +6,7 @@ tags: [Unity, C#, Game Jam, Shooter, Roguelike]
 category: game
 role: Solo
 date: "2021-06"
-images: []
+images: ["/assets/projects/mm1.png", "/assets/projects/mm2.png"]
 video: ""
 links:
   itch: https://seminix.itch.io/modular-mothership

@@ -6,7 +6,7 @@ tags: [Unity, C#, Game Jam, 3D, Cooking]
 category: game
 role: Programmer (team of 6, Beetroot Studios)
 date: "2022-11"
-images: []
+images: ["/assets/projects/cwp1.png", "/assets/projects/cwp2.png", "/assets/projects/cwp3.png", "/assets/projects/cwp4.png", "/assets/projects/cwp5.png"]
 video: ""
 links:
   itch: https://beetrootgames.itch.io/cooking-papa-with-meelon-pusk

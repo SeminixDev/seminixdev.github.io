@@ -6,7 +6,7 @@ tags: [Unity, C#, Game Jam, Platformer, Fighter]
 category: game
 role: Solo
 date: "2020-08"
-images: []
+images: ["/assets/projects/sn1.png", "/assets/projects/sn2.png", "/assets/projects/sn3.png", "/assets/projects/sn4.png"]
 video: ""
 links:
   itch: https://seminix.itch.io/spectral-ninja
