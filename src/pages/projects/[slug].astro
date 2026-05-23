@@ -69,38 +69,37 @@ const hasMedia = lightboxItems.length > 0;
           ))}
         </div>
       )}
+
+      <!-- Media gallery -->
+      {hasMedia && (
+        <div style="margin-top:2rem;">
+          <div class="media-gallery">
+            {data.video && (
+              <div
+                class="media-gallery__video-thumb"
+                role="button"
+                tabindex="0"
+                data-lightbox-index="0"
+                aria-label="Open video"
+              >
+                <span class="video-play-icon">&#9654;</span>
+                <span class="video-play-label">Watch Video</span>
+              </div>
+            )}
+            {data.images.map((src, i) => (
+              <img
+                class="media-gallery__thumb"
+                src={src}
+                alt={`${data.title} screenshot ${i + 1}`}
+                loading="lazy"
+                data-lightbox-index={data.video ? i + 1 : i}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </header>
-
-  <!-- Media gallery -->
-  {hasMedia && (
-    <section class="container" style="padding-bottom:0;">
-      <h2 class="section-title">// Media</h2>
-      <div class="media-gallery">
-        {data.video && (
-          <div
-            class="media-gallery__video-thumb"
-            role="button"
-            tabindex="0"
-            data-lightbox-index="0"
-            aria-label="Open video"
-          >
-            <span class="video-play-icon">&#9654;</span>
-            <span class="video-play-label">Watch Video</span>
-          </div>
-        )}
-        {data.images.map((src, i) => (
-          <img
-            class="media-gallery__thumb"
-            src={src}
-            alt={`${data.title} screenshot ${i + 1}`}
-            loading="lazy"
-            data-lightbox-index={data.video ? i + 1 : i}
-          />
-        ))}
-      </div>
-    </section>
-  )}
 
   <!-- Project content (Markdown body) -->
   <section class="container project-content">
