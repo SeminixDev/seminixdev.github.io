@@ -6,7 +6,7 @@ tags: [C++, Vulkan, Networking, Physics, Multithreading, GPU Compute, ImGui]
 category: engine
 role: Solo
 date: "2026-05"
-images: ["/assets/projects/mr1.png", "/assets/projects/mr2.png", "/assets/projects/mr3.png", "/assets/projects/mr4.png"]
+images: ["/assets/projects/mr3.png", "/assets/projects/mr4.png", "/assets/projects/mr1.png", "/assets/projects/mr2.png"]
 video: ""
 links:
   github: https://github.com/SeminixDev/ModulaRender
