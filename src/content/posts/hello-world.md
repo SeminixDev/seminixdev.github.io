@@ -1,5 +1,5 @@
 ---
-title: Welcome to My Devlog
+title: Hello World
 date: "2026-05-22"
 summary: An introduction to this blog — where I'll post development updates, technical deep-dives, and game jam retrospectives.
 tags: [Meta, Site]
