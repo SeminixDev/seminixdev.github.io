@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
 
 interface Props {
   post: CollectionEntry<'posts'>;
@@ -22,12 +23,14 @@ const { Content } = await render(post);
 // Resolve linked project name if present
 let linkedProjectTitle: string | undefined;
 let linkedProjectSlug: string | undefined;
+let linkedProject: CollectionEntry<'projects'> | undefined;
 if (data.projectId) {
   const allProjects = await getCollection('projects');
   const linked = allProjects.find((p) => p.id === data.projectId);
   if (linked) {
     linkedProjectTitle = linked.data.title;
     linkedProjectSlug  = linked.id;
+    linkedProject = linked;
   }
 }
 
@@ -60,10 +63,19 @@ const formattedDate = new Date(data.date + 'T00:00:00').toLocaleDateString('en-G
   </header>
 
   <!-- Post content -->
-  <div class="container">
-    <article class="prose">
-      <Content />
-    </article>
-    <p style="padding-bottom:3rem;"><a href="/blog">&larr; All Posts</a></p>
+  <div class="container post-layout">
+    <div class="post-main">
+      <article class="prose">
+        <Content />
+      </article>
+      <p style="padding-bottom:3rem;"><a href="/blog">&larr; All Posts</a></p>
+    </div>
+
+    {linkedProject && (
+      <aside class="post-sidebar">
+        <h3 class="section-title" style="font-size:1.2rem; margin-bottom:1rem;">// Related Project</h3>
+        <ProjectCard project={linkedProject} />
+      </aside>
+    )}
   </div>
 </BaseLayout>

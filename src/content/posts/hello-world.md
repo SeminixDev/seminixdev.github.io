@@ -1,9 +1,10 @@
 ---
 title: Hello World
 date: "2026-05-22"
-summary: An introduction to this blog — where I'll post development updates, technical deep-dives, and game jam retrospectives.
+summary: An introduction to the blog — where I'll post development updates and technical deep-dives.
 tags: [Meta, Site]
 image: ""
+projectId: portfolio-website
 ---
 
 This is the first post on my portfolio blog. I'll use this space to document development progress on my projects, share technical write-ups, and post retrospectives on game jams I participate in.
@@ -14,7 +15,6 @@ Posts here will fall into a few categories:
 
 - **Devlogs** — progress updates on active projects: what I built, what broke, and what I learned
 - **Technical write-ups** — deeper dives into specific systems (networking, rendering, physics)
-- **Jam retrospectives** — what went well, what didn't, and how I'd approach it differently next time
 
 ## How Posts Link to Projects
 

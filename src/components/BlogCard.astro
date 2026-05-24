@@ -16,7 +16,8 @@ const formattedDate = new Date(data.date + 'T00:00:00').toLocaleDateString('en-G
 });
 ---
 
-<a href={`/blog/${id}`} class="blog-card" aria-label={data.title}>
+<article class="blog-card">
+  <a href={`/blog/${id}`} class="stretched-link" aria-label={data.title}></a>
   <div class="blog-card__accent"></div>
   <div class="blog-card__body">
     <p class="blog-card__date">{formattedDate}</p>
@@ -29,8 +30,10 @@ const formattedDate = new Date(data.date + 'T00:00:00').toLocaleDateString('en-G
       </div>
     )}
 
-    {projectTitle && (
-      <p class="blog-card__project-link">&#8627; {projectTitle}</p>
+    {projectTitle && data.projectId && (
+      <div class="blog-card__project-link">
+        &#8627; <a href={`/projects/${data.projectId}`}>{projectTitle}</a>
+      </div>
     )}
   </div>
-</a>
+</article>
