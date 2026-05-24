@@ -1,9 +1,9 @@
 ---
 title: ModulaRender
 subtitle: Networked Vulkan Physics Simulation Engine
-description: A distributed real-time physics simulation engine built from scratch in C++ with Vulkan 1.3. Features a three-thread architecture pinned to CPU cores, full-mesh TCP networking for 4 peers, a 14-pair rigid body collision system, and GPU-accelerated boid flocking.
-skills: [C++, Vulkan]
-tags: [Networking, Physics, Multithreading, GPU Compute, ImGui]
+description: A distributed real-time physics simulation engine and renderer built from scratch in C++ & Vulkan 1.3. 
+skills: [C++, Vulkan, Multithreading, Physics, Networking]
+tags: [GPU Compute, CMake]
 category: engine
 role: Solo
 date: "2026-05"
@@ -14,19 +14,19 @@ links:
 featured: true
 ---
 
-A distributed real-time physics simulation engine built from scratch in C++ with Vulkan 1.3, designed as a final-year MEng project to explore the intersection of graphics, systems programming, and networked simulation.
+A distributed real-time physics simulation engine built from scratch in C++ with Vulkan 1.3, designed as a final-year MEng project to explore the intersection of graphics, systems programming, and networked simulation. Features a three-thread architecture pinned to CPU cores, full-mesh TCP networking for 4 peers, a 14-pair rigid body collision system, and Reynolds' boid flocking.
 
 ## Multithreaded Architecture
 
 Three fully independent subsystems — Visualisation, Simulation, and Networking — each pinned to specific CPU cores via Win32 `SetThreadAffinityMask`. Each thread runs a **sleep/spin hybrid clock**: sleeps until 1.5 ms before the deadline then spin-locks for precision, achieving sub-millisecond accuracy at rates up to 1000 Hz. All three subsystem frequencies are adjustable at runtime via ImGui.
 
-Thread-safe state sharing uses a double-buffered `PhysicsStateBuffer` (mutex-guarded swap), a `GlobalState` struct for infrequent cross-thread writes, and a `_pendingModels` queue that decouples entity spawning between threads — introduced after a crash caused by the sim thread reallocating `EntityRegistry` while the render thread held iterators into the same vectors.
+Thread-safe state sharing uses a double-buffered `PhysicsStateBuffer` (mutex-guarded swap), a `GlobalState` struct for infrequent cross-thread writes, and a `_pendingModels` queue that decouples entity spawning between threads.
 
 ## Vulkan Rendering Pipeline
 
 Forward renderer using **Vulkan 1.3 Dynamic Rendering** — no VkRenderPass objects. The per-frame pipeline is:
 
-1. Shadow depth pass — orthographic projection, slope-scale bias, PCF 3×3 soft shadows
+1. Shadow depth pass — orthographic projection, slope-scale bias, hardware PCF 3×3 soft shadows
 2. Particle compute dispatch — 10k particles, positions updated by compute shader into an SSBO
 3. Barrier — compute write → vertex read
 4. Main scene draw — Phong (per-pixel + bump mapping via dFdx/dFdy) and Gouraud shading, bindless texture array
@@ -37,7 +37,7 @@ Scenes communicate with the renderer exclusively through a `FrameRenderData` str
 
 ## TCP Full-Mesh Networking
 
-Four-peer full-mesh topology over TCP (migrated from UDP during development — TCP's reliable ordering eliminated the need for manual retry queues, ACKs, and sequence numbers, with negligible latency difference on LAN). Each peer listens on `basePort + peerId`; a PowerShell script launches all four peers from a single command.
+Four-peer full-mesh topology over TCP.
 
 Clock drift is addressed by timestamping packets with the receiver's local clock. **Dead reckoning** extrapolates positions between network ticks. **Smooth lerp correction** converges on authoritative state over a configurable blend window without snapping.
 
@@ -51,11 +51,11 @@ A **collision dispatch table** maps ordered type pairs to function pointers for 
 
 ## Flocking & Spatial Partitioning
 
-Reynolds' canonical boid behaviours — separation, alignment, cohesion — plus collision avoidance, running on the GPU as a compute shader updating SSBOs. Boid weights and radii are tunable per-boid via ImGui.
+Reynolds' canonical boid behaviours — separation, alignment, cohesion — plus collision avoidance. Boid weights and radii are tunable per-peer via ImGui.
 
-Two acceleration structures implement a common `ISpatialPartition` interface, switchable at runtime:
+Two acceleration structures implement a common `ISpatialPartition` interface, switchable at runtime with debug wireframe overlay (green for grid, magenta for octree leaves):
 
 - **Uniform Grid** — O(N) build, O(K) query by hashing boid positions into cells of side = query radius
-- **Octree** — O(N log N) build, pool-allocated nodes to avoid heap fragmentation, debug wireframe overlay (green for grid, magenta for octree leaves)
+- **Octree** — O(N log N) build, pool-allocated nodes to avoid heap fragmentation
 
 Live performance metrics — build/query time, memory, result count — are captured via `high_resolution_clock` and displayed in ImGui for direct comparison between structures.
