@@ -1,9 +1,8 @@
 ---
 title: Spectral Ninja
-subtitle: 2D Fighter Platformer with Time Rewind
-description: A 2D fighter platformer where you control a ninja who can rewind time to trigger spectral damage. Ranked 331/1773 overall and 267/1773 for fun in Brackeys Jam 2020.2. Also published on Newgrounds (1,061 views, 3.19/5).
-tags: [Game Jam, Platformer, Fighter]
+description: 2D fighter platformer. Play as a ninja who can rewind time. Use your sword and spectral abilities to slay the foes in your path.
 skills: [Unity, C#]
+tags: [Game Jam, 2D, Action, Platformer, Fighter]
 category: game
 playInBrowser: true
 role: Solo
@@ -17,6 +16,18 @@ links:
 featured: true
 ---
 
-Made solo for **Brackeys Jam 2020.2** (theme: *Rewind*). You control a ninja who can kill enemies through the spectral dimension. Attacks deal physical damage; the second attack and dash also deal spectral damage (shown in blue on the enemy health bar). Rewinding restores 50% of health lost during the 4-second window and triggers all accumulated spectral damage simultaneously.
+**Brackeys Jam 2020.2** Entry
 
-Also published on Newgrounds, achieving 1,061 views and a 3.19/5 rating from 89 ratings. Ranked **331/1773 overall** and **267/1773 for fun** in the jam.
+### Features:
+- **Theme**: Rewind
+- Control a ninja who can kill enemies through the spectral dimension
+- Slice foes with your sword, causing physical and spectral damage
+- Use your dash ability to hit many foes and get out of danger
+- Rewind time to restore health and trigger all spectral damage
+- Fight back against melee and ranged enemies
+- Jump and dash through six unique, hand-crafted levels
+
+### Stats:
+- **Game Jam Ranking**: 331/1773 overall & 267/1773 fun
+- **Itch Analytics**: 280+ views & 150+ browser plays
+- **Newgrounds Analytics**: 1,061 views & 3.19/5 rating out of 89 ratings

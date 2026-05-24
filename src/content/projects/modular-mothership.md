@@ -1,9 +1,8 @@
 ---
 title: Modular Mothership
-subtitle: Roguelike Horizontal Space Shooter
-description: "A roguelike horizontal space shooter where you assemble your ship from collected weapon modules to grow stronger. Made solo for GMTK 2021 (theme: Joined Together). Ranked 1243/5638 overall and 760/5638 for fun."
-tags: [Game Jam, Shooter, Roguelike]
+description: "Roguelike horizontal space shooter where you assemble your ship from collected weapon modules to grow stronger."
 skills: [Unity, C#]
+tags: [Game Jam, Shooter, Roguelike]
 category: game
 role: Solo
 date: "2021-06"
@@ -14,6 +13,13 @@ links:
 featured: false
 ---
 
-Made solo for **GMTK Game Jam 2021** (theme: *Joined Together*). Pick up guns to join them to your ship and grow stronger. Avoid enemy bullets — you can judge their damage by size.
+**GMTK Game Jam 2021** Entry
 
-Achieved 261 views and 121 browser plays out of 5,638 entries, ranking **1243 overall** and **760 for fun**.
+### Features
+- **Theme**: Joined Together
+- Pick up guns to join them to your ship and grow stronger
+- Avoid enemy bullets — you can judge their damage by size
+
+### Stats
+- **Game Jam Ranking**: 1243/5638 overall & 760/5638 fun
+- **Itch Analytics**: 260+ views & 120 browser plays

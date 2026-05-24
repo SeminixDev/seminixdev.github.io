@@ -1,9 +1,8 @@
 ---
 title: GreyPixelGrabbing
-subtitle: 2D Vertical-Scroller Platformer with Grappling Hook
-description: A 2D vertical-scroller platformer with a grappling hook mechanic. Use your gun and grappling hook to ascend broken platforms from below. Made for Three Thing Game at the University of Hull.
-tags: [Game Jam, Platformer]
+description: "2D vertical-scroller platformer. Use your gun and grappling hook to ascend platforms from below."
 skills: [MonoGame, C#]
+tags: [Game Jam, Platformer]
 category: game
 role: Programmer (team of 4)
 date: "2025-11"
@@ -14,6 +13,12 @@ links:
 featured: false
 ---
 
-Made for **Three Thing Game** (University of Hull private game jam, November 2025). Theme words: *Pixel, Grey, Grabbing*. A lonely Grey Pixel grabbing for survival — use your gun and grappling hook, grabbing onto broken platforms to ascend from the Hell you fell into. The only way out is up.
+**Three Thing Game** (November 2025) Entry
+- Collaborated with three fellow University of Hull students
 
-Collaborated with three fellow Hull students.
+### Features
+- **Theme**: Pixel, Grey, Grabbing
+- Play as a lonely Grey Pixel grabbing for survival
+- Use your grappling hook to grab onto platforms and ascend
+- Dodge enemies, or shoot them with your gun to gain score
+- See how high you can get as the game becomes more difficult over time

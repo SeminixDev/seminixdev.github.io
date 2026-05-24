@@ -1,9 +1,8 @@
 ---
 title: Ore Gobbler
-subtitle: 2D Block Mining Survival Game
-description: "A 2D mining game where you balance sparkler production for profit against defending yourself from ghost miners you accidentally awoke. Made with Beetroot Studios for Three Thing Game (theme: Turkeys, Ghosts, Sparklers)."
-tags: [Game Jam, Mining, Strategy]
+description: "2D mining game where you balance sparkler production for profit against defending yourself from ghost miners."
 skills: [Unity, C#]
+tags: [Game Jam, Mining, Strategy]
 category: game
 role: Programmer (team of 6, Beetroot Studios)
 date: "2021-11"
@@ -14,4 +13,11 @@ links:
 featured: false
 ---
 
-Made for **Three Thing Game** (University of Hull private game jam, November 2021) with Beetroot Studios. Theme words: *Turkeys, Ghosts, Sparklers*. Mine ores to make sparklers to sell for money — but you've set up camp over the graves of miners past. Their ghosts are coming for you, and their only weakness is sparklers. Balance profit against self-defence as you dig deeper and face more dangerous depths.
+**Three Thing Game** (November 2021) Entry
+
+### Features
+- **Theme**: Turkeys, Ghosts, Sparklers
+- Mine ores to make sparklers to sell for money
+- Balance profit against self-defence against ghosts whose only weakness is sparklers
+- Dig deeper and face more dangerous depths
+- Collaborated with Beetroot Studios

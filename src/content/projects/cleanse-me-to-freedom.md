@@ -1,9 +1,8 @@
 ---
 title: Cleanse Me To Freedom
-subtitle: Twin-Stick Boomer Shooter
-description: "A twin-stick boomer shooter where you fight waves of enemies using a shotgun and scythe across multiple floors. Made for Arcademia Jam 2026 (theme: Pandora's Box). 22 views, 15 downloads."
-tags: [Game Jam, Shooter, Twin-Stick]
+description: "Twin-stick boomer shooter. Fight waves of enemies using a shotgun and scythe."
 skills: [Godot, GDScript]
+tags: [Game Jam, Shooter, Twin-Stick]
 category: game
 role: Programmer (team of 2)
 date: "2026-03"
@@ -14,6 +13,14 @@ links:
 featured: true
 ---
 
-Made for **Arcademia Jam 2026** (theme: *Pandora's Box*). You play as a priest sent to exorcise a demonic box — you fail the ritual and are sucked inside. Armed with a shotgun and scythe, fight your way out by cleansing each floor of enemies.
+**Arcademia Jam 2026** Entry
+- Collaborated with a student from WITS university who handled narrative design and 3D modelling
 
-Collaborated with a student from the University of the Witwatersrand (WITS) who handled narrative design and 3D modelling.
+### Features
+- **Theme**: Pandora's Box
+- Play as a priest sent to exorcise a demonic box
+- Fight your way out by cleansing each wave of enemies
+- Use your shotgun, scythe, and special abilities to deal with the three different enemy types
+
+### Stats
+- **Analytics**: 20+ views and 15+ downloads
