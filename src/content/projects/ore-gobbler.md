@@ -2,7 +2,8 @@
 title: Ore Gobbler
 subtitle: 2D Block Mining Survival Game
 description: "A 2D mining game where you balance sparkler production for profit against defending yourself from ghost miners you accidentally awoke. Made with Beetroot Studios for Three Thing Game (theme: Turkeys, Ghosts, Sparklers)."
-tags: [Unity, C#, Game Jam, Mining, Strategy]
+tags: [Game Jam, Mining, Strategy]
+skills: [Unity, C#]
 category: game
 role: Programmer (team of 6, Beetroot Studios)
 date: "2021-11"

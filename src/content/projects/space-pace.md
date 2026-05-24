@@ -1,8 +1,8 @@
 ---
 title: "Space Pace: Shooter"
-subtitle: 2D Vertical-Scroller Space Shooter
-description: A short 2D vertical-scroller space shooter made as a personal project. My first completed standalone game, built to learn Unity.
-tags: [Unity, C#, Shooter]
+description: 2D Vertical-Scroller Space Shooter. My first completed standalone game, built to learn Unity and game programming.
+tags: [2D, Shooter]
+skills: [Unity, C#]
 category: game
 role: Solo
 date: "2020-05"
@@ -13,6 +13,10 @@ links:
 featured: false
 ---
 
-A short vertical-scroller space shooter made as a personal project in May 2020 — my first completed Unity game, built outside of any jam to learn the engine.
+### Features
+- Steer your ship left and right to avoid enemy projectiles
+- Shoot down waves of enemy ships to gain gold
+- After each level, spend money at a shop to repair and upgrade your ship
 
-55 views, 16 browser plays.
+### Analytics
+- 55 views, 16 browser plays.

@@ -14,7 +14,11 @@ function formatDate(dateStr: string): string {
   return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
 }
 
-const meta = [data.role, data.date ? formatDate(data.date) : ''].filter(Boolean).join(' · ');
+const meta = [
+  data.role, 
+  data.date ? formatDate(data.date) : '',
+  data.playInBrowser ? '✨Play In Browser' : ''
+].filter(Boolean).join(' · ');
 ---
 
 <article class="project-card" data-category={data.category}>
@@ -57,8 +61,9 @@ const meta = [data.role, data.date ? formatDate(data.date) : ''].filter(Boolean)
     {meta && <p class="project-card__meta">{meta}</p>}
     <p class="project-card__desc">{data.description}</p>
 
-    {data.tags.length > 0 && (
+    {(data.skills && data.skills.length > 0 || data.tags.length > 0) && (
       <div class="project-card__tags">
+        {data.skills && data.skills.map((skill) => <span class="skill">{skill}</span>)}
         {data.tags.map((tag) => <span class="tag">{tag}</span>)}
       </div>
     )}

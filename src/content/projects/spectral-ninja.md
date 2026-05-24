@@ -2,8 +2,10 @@
 title: Spectral Ninja
 subtitle: 2D Fighter Platformer with Time Rewind
 description: A 2D fighter platformer where you control a ninja who can rewind time to trigger spectral damage. Ranked 331/1773 overall and 267/1773 for fun in Brackeys Jam 2020.2. Also published on Newgrounds (1,061 views, 3.19/5).
-tags: [Unity, C#, Game Jam, Platformer, Fighter]
+tags: [Game Jam, Platformer, Fighter]
+skills: [Unity, C#]
 category: game
+playInBrowser: true
 role: Solo
 date: "2020-08"
 images: ["/assets/projects/sn1.png", "/assets/projects/sn2.png", "/assets/projects/sn3.png", "/assets/projects/sn4.png"]

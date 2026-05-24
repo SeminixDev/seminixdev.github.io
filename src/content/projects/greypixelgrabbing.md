@@ -2,7 +2,8 @@
 title: GreyPixelGrabbing
 subtitle: 2D Vertical-Scroller Platformer with Grappling Hook
 description: A 2D vertical-scroller platformer with a grappling hook mechanic. Use your gun and grappling hook to ascend broken platforms from below. Made for Three Thing Game at the University of Hull.
-tags: [MonoGame, C#, Game Jam, Platformer]
+tags: [Game Jam, Platformer]
+skills: [MonoGame, C#]
 category: game
 role: Programmer (team of 4)
 date: "2025-11"

@@ -1,8 +1,9 @@
 ---
 title: Out of Sight
 subtitle: Top-Down 2D Stealth Puzzle
-description: "A top-down puzzle game with one rule — nothing can move or shoot while inside your vision cone. Made solo for GMTK 2020 (theme: Out of Control). Ranked 1636/5247 overall, 505 for originality."
-tags: [Unity, C#, Game Jam, Puzzle, Top-Down]
+description: "A top-down puzzle game - nothing can move or shoot while inside your vision. Made solo for GMTK 2020."
+tags: [2D, Game Jam, Puzzle, Play In Browser]
+skills: [Unity, C#]
 category: game
 role: Solo
 date: "2020-07"
@@ -13,6 +14,9 @@ links:
 featured: false
 ---
 
-Made solo for **GMTK Game Jam 2020** (theme: *Out of Control*). The core mechanic: nothing — enemies or projectiles — can move or shoot while inside your vision cone. Use your visibility as a shield, and exploit the blind spots to survive.
+- **GMTK Game Jam 2020** entry
+- Theme: Out of Control
+- Ranked 1636/5247 overall, 505/5247 for originality.
+- 94 views and 41 browser plays
 
-94 views and 41 browser plays out of 5,247 entries.
+The core mechanic: nothing — enemies or projectiles — can move or shoot while inside your vision cone. Use your visibility as a shield, and exploit the blind spots to survive.

@@ -2,7 +2,8 @@
 title: ModulaRender
 subtitle: Networked Vulkan Physics Simulation Engine
 description: A distributed real-time physics simulation engine built from scratch in C++ with Vulkan 1.3. Features a three-thread architecture pinned to CPU cores, full-mesh TCP networking for 4 peers, a 14-pair rigid body collision system, and GPU-accelerated boid flocking.
-tags: [C++, Vulkan, Networking, Physics, Multithreading, GPU Compute, ImGui]
+tags: [Networking, Physics, Multithreading, GPU Compute, ImGui]
+skills: [C++, Vulkan]
 category: engine
 role: Solo
 date: "2026-05"

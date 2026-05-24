@@ -2,7 +2,8 @@
 title: Prawnageddon
 subtitle: 2D Fighter Side-Scroller
 description: "A 2D fighter side-scroller where you play as a prawn fighting to escape the food chain. Made with Beetroot Studios for Climax Game Jam in support of Mind (theme: Chain)."
-tags: [Unity, C#, Game Jam, Fighter, Side-Scroller]
+tags: [Game Jam, Fighter, Side-Scroller]
+skills: [Unity, C#]
 category: game
 role: Programmer (team of 6, Beetroot Studios)
 date: "2022-03"

@@ -7,6 +7,7 @@ const projects = defineCollection({
     title:       z.string(),
     description: z.string(),
     tags:        z.array(z.string()),
+    skills:      z.array(z.string()).default([]),
     category:    z.enum(['engine', 'game', 'web']),
     role:        z.string(),
     date:        z.string(),
@@ -14,6 +15,7 @@ const projects = defineCollection({
     video:       z.string().optional(),
     links:       z.record(z.string(), z.string()).default({}),
     featured:    z.boolean().default(false),
+    playInBrowser: z.boolean().default(false),
   }),
 });
 

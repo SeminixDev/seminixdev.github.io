@@ -2,7 +2,8 @@
 title: Portfolio Website
 subtitle: Personal Developer Portfolio
 description: This site — a code-themed portfolio with dark/light mode, filterable project gallery, image carousels, lightbox gallery, Markdown blog, and individual project detail pages. Built with Astro.
-tags: [Astro, HTML, CSS, JavaScript, TypeScript]
+tags: []
+skills: [Astro, HTML, CSS, JavaScript, TypeScript]
 category: web
 role: Solo
 date: "2026-05"

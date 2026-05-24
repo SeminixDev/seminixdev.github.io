@@ -52,10 +52,12 @@ const hasMedia = lightboxItems.length > 0;
       <div class="project-hero__meta">
         {data.role && <span>&#128100; {data.role}</span>}
         {data.date && <span>&#128197; {formattedDate}</span>}
+        {data.playInBrowser && <span>✨ Play In Browser</span>}
       </div>
 
-      {data.tags.length > 0 && (
+      {(data.skills && data.skills.length > 0 || data.tags.length > 0) && (
         <div class="project-card__tags" style="margin-bottom:1.25rem;">
+          {data.skills && data.skills.map((skill) => <span class="skill">{skill}</span>)}
           {data.tags.map((tag) => <span class="tag">{tag}</span>)}
         </div>
       )}

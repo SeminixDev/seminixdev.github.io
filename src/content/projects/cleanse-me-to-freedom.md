@@ -2,7 +2,8 @@
 title: Cleanse Me To Freedom
 subtitle: Twin-Stick Boomer Shooter
 description: "A twin-stick boomer shooter where you fight waves of enemies using a shotgun and scythe across multiple floors. Made for Arcademia Jam 2026 (theme: Pandora's Box). 22 views, 15 downloads."
-tags: [Godot, GDScript, Game Jam, Shooter, Twin-Stick]
+tags: [Game Jam, Shooter, Twin-Stick]
+skills: [Godot, GDScript]
 category: game
 role: Programmer (team of 2)
 date: "2026-03"

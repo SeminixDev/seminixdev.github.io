@@ -2,7 +2,8 @@
 title: Cooking with Papa
 subtitle: 3D Cooking Chaos Game
 description: "A 3D cooking game where a tech mogul cooks meals in a workshop to keep his remaining staff happy. Made with Beetroot Studios for Three Thing Game jam (theme: Coal, Workshop, Candy Canes)."
-tags: [Unity, C#, Game Jam, 3D, Cooking]
+tags: [Game Jam, 3D, Cooking]
+skills: [Unity, C#]
 category: game
 role: Programmer (team of 6, Beetroot Studios)
 date: "2022-11"
