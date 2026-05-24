@@ -2,7 +2,7 @@
 title: Modular Mothership
 description: "Roguelike horizontal space shooter where you assemble your ship from collected weapon modules to grow stronger."
 skills: [Unity, C#]
-tags: [Game Jam, Shooter, Roguelike]
+tags: [Game Jam, 2D, Action, Shooter, Roguelike]
 category: game
 role: Solo
 date: "2021-06"
@@ -18,6 +18,7 @@ featured: false
 ### Features
 - **Theme**: Joined Together
 - Pick up guns to join them to your ship and grow stronger
+- Fight waves of many unique enemies
 - Avoid enemy bullets — you can judge their damage by size
 
 ### Stats

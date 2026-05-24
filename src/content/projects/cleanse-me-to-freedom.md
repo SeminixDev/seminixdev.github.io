@@ -2,7 +2,7 @@
 title: Cleanse Me To Freedom
 description: "Twin-stick boomer shooter. Fight waves of enemies using a shotgun and scythe."
 skills: [Godot, GDScript]
-tags: [Game Jam, Shooter, Twin-Stick]
+tags: [Game Jam, 3D, Shooter, Twin-Stick]
 category: game
 role: Programmer (team of 2)
 date: "2026-03"

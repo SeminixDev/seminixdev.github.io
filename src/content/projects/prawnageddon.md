@@ -2,7 +2,7 @@
 title: Prawnageddon
 description: "2D fighter side-scroller where you play as a prawn fighting to escape the food chain."
 skills: [Unity, C#]
-tags: [Game Jam, Fighter, Side-Scroller]
+tags: [Game Jam, 2D, Action, Fighter, Side-Scroller]
 category: game
 role: Programmer (team of 6, Beetroot Studios)
 date: "2022-03"

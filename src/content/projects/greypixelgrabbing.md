@@ -2,7 +2,7 @@
 title: GreyPixelGrabbing
 description: "2D vertical-scroller platformer. Use your gun and grappling hook to ascend platforms from below."
 skills: [MonoGame, C#]
-tags: [Game Jam, Platformer]
+tags: [Game Jam, 2D, Action, Platformer]
 category: game
 role: Programmer (team of 4)
 date: "2025-11"
@@ -21,4 +21,4 @@ featured: false
 - Play as a lonely Grey Pixel grabbing for survival
 - Use your grappling hook to grab onto platforms and ascend
 - Dodge enemies, or shoot them with your gun to gain score
-- See how high you can get as the game becomes more difficult over time
+- See what score you can get as the game becomes more difficult over time
