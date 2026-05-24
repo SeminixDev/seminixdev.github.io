@@ -47,7 +47,7 @@ const hasMedia = lightboxItems.length > 0;
     <div class="container">
       <p class="project-hero__category">{data.category.toUpperCase()}</p>
       <h1 class="project-hero__title">{data.title}</h1>
-      {data.subtitle && <p class="project-hero__subtitle">{data.subtitle}</p>}
+      {data.description && <p class="project-hero__subtitle">{data.description}</p>}
 
       <div class="project-hero__meta">
         {data.role && <span>&#128100; {data.role}</span>}

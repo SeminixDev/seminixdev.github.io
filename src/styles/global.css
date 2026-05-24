@@ -552,7 +552,6 @@ section {
     font-size: 1.1rem;
     color: var(--text);
     margin: 0 0 1rem;
-    font-family: 'Hangar', monospace;
 }
 .project-hero__meta {
     display: flex;
