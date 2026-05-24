@@ -1,6 +1,5 @@
 ---
 title: ModulaRender
-subtitle: Networked Vulkan Physics Simulation Engine
 description: A distributed real-time physics simulation engine and renderer built from scratch in C++ & Vulkan 1.3. 
 skills: [C++, Vulkan, Multithreading, Physics, Networking]
 tags: [GPU Compute, CMake]
