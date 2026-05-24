@@ -1,7 +1,6 @@
 ---
 title: Portfolio Website
-subtitle: Personal Developer Portfolio
-description: This site — a code-themed portfolio with dark/light mode, filterable project gallery, image carousels, lightbox gallery, Markdown blog, and individual project detail pages. Built with Astro.
+description: A fully static, code-themed portfolio with dark/light mode, filterable project gallery, and Markdown-based content management.
 skills: [Astro, HTML, CSS, JavaScript, TypeScript]
 tags: [Meta]
 category: web
@@ -14,6 +13,19 @@ links:
 featured: false
 ---
 
-A fully static portfolio site built with **Astro** — the source of truth for all my projects. Features include dark/light theme toggle (persisted in localStorage, respects `prefers-color-scheme`), a filterable project gallery with image carousels and a keyboard-navigable lightbox, a blog system with content authored in Markdown, individual project detail pages with technical write-ups, and a responsive mobile layout.
+A fully static portfolio site built with **Astro**. It showcases all of my projects and helps me document my software and game development journey.
 
-Content is managed via Astro's Content Collections — adding a new project means writing a single `.md` file. The site is deployed automatically to GitHub Pages via a GitHub Actions workflow on every push to `main`.
+## Architecture & Content
+
+Content is managed exclusively via Astro's **Content Collections** — adding a new project or blog post simply means writing a new `.md` file with a specific front-matter schema. This completely eliminates the need for an external CMS or database.
+
+The site is built as a fully static output and deployed automatically to GitHub Pages via a **GitHub Actions** workflow triggered on every push to the `main` branch. 
+
+## UI & Features
+
+The site features a custom Vanilla CSS design system using CSS variables, ensuring a lightweight payload with zero framework overhead. Key features include:
+
+- **Theme Toggling**: A dark/light mode toggle that persists in `localStorage` and respects the user's `prefers-color-scheme`.
+- **Dynamic Project Gallery**: Filterable project cards with hover-activated image carousels.
+- **Media Lightbox**: A custom, keyboard-navigable media lightbox for viewing project screenshots and videos.
+- **Responsive Layout**: A mobile-first design that adapts seamlessly to all screen sizes.
