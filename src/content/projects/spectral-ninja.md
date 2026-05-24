@@ -1,6 +1,6 @@
 ---
 title: Spectral Ninja
-description: 2D fighter platformer. Play as a ninja who can rewind time. Use your sword and spectral abilities to slay the foes in your path.
+description: 2D fighter platformer. Play as a ninja who can rewind time. Use your sword and spectral abilities to slay foes in your path.
 skills: [Unity, C#]
 tags: [Game Jam, 2D, Action, Platformer, Fighter]
 category: game
