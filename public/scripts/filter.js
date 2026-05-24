@@ -14,7 +14,7 @@
     });
     cards.forEach(function (card) {
       var match = category === 'all' || card.getAttribute('data-category') === category;
-      (card as HTMLElement).style.display = match ? '' : 'none';
+      card.style.display = match ? '' : 'none';
     });
   }
 
