@@ -551,9 +551,7 @@ section {
 }
 .blog-card:hover .blog-card__title { color: var(--accent); }
 .blog-card__summary { color: var(--text-muted); font-size: .9rem; flex: 1; margin: 0 0 .75rem; }
-.blog-card__project-link { font-size: .8rem; margin: .5rem 0 0; position: relative; z-index: 2; }
-.blog-card__project-link a { color: var(--accent); text-decoration: none; }
-.blog-card__project-link a:hover { text-decoration: underline; }
+.blog-card__project-link { font-size: .8rem; color: var(--accent); margin: .5rem 0 0; position: relative; z-index: 2; }
 
 /* ===== Project Detail Page ===== */
 .project-hero {
@@ -664,8 +662,8 @@ section {
 }
 .post-sidebar {
     position: sticky;
-    top: 6rem;
-    padding-top: 2rem;
+    top: 1rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
