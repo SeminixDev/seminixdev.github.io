@@ -1,0 +1,81 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+};
+
+const { post } = Astro.props;
+const { data, id } = post;
+const { Content } = await render(post);
+
+// Resolve linked project name if present
+let linkedProjectTitle: string | undefined;
+let linkedProjectSlug: string | undefined;
+let linkedProject: CollectionEntry<'projects'> | undefined;
+if (data.projectId) {
+  const allProjects = await getCollection('projects');
+  const linked = allProjects.find((p) => p.id === data.projectId);
+  if (linked) {
+    linkedProjectTitle = linked.data.title;
+    linkedProjectSlug  = linked.id;
+    linkedProject = linked;
+  }
+}
+
+const formattedDate = new Date(data.date + 'T00:00:00').toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<BaseLayout title={data.title} description={data.summary}>
+  <!-- Post hero -->
+  <header class="post-hero">
+    <div class="container">
+      <h1 class="post-hero__title">{data.title}</h1>
+      <p class="post-hero__meta">{formattedDate}</p>
+
+      {data.tags.length > 0 && (
+        <div class="project-card__tags" style="margin-top:.5rem;">
+          {data.tags.map((tag) => <span class="tag">{tag}</span>)}
+        </div>
+      )}
+
+      {linkedProjectTitle && linkedProjectSlug && (
+        <p class="post-hero__project-link">
+          Related project: <a href={`/projects/${linkedProjectSlug}`}>{linkedProjectTitle}</a>
+        </p>
+      )}
+    </div>
+  </header>
+
+  <!-- Post content -->
+  <div class="container post-layout">
+    <div class="post-main">
+      <article class="prose">
+        <Content />
+      </article>
+      <p style="padding-bottom:3rem;"><a href="/blog">&larr; All Posts</a></p>
+    </div>
+
+    {linkedProject && (
+      <aside class="post-sidebar">
+        <h3 class="section-title" style="font-size:1.2rem; margin-bottom:1rem;">// Related Project</h3>
+        <ProjectCard project={linkedProject} />
+      </aside>
+    )}
+  </div>
+</BaseLayout>

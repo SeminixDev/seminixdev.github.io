@@ -1,0 +1,109 @@
+I have created a variety of games predominantly for game jams by myself and in collaboration with others. These include:
+ [2026/Team] Cleanse Me To Freedom - twin-stick boomer shooter where you fight waves of enemies with your shotgun and scythe
+ https://usagidvv.itch.io/cleansemetofreedom
+Source code available (github)
+Godot GDScript
+Lore: You are a priest, sent to exorcise the fated "La caja embrujada", a demonic box filled with creates untold. You fail the ritual and are sucked into the world. Now you are forced to fight your way back out and cleanse each floor to finally end this tyranny.
+Destroy all that stands before you and free yourself from eternal purgatory
+Reached out to a student from University of the Witwatersrand (WITS) to help with narrative and aesthetics (e.g. modelling)
+Arcademia Jam 2026 March 22 views 15 downloads
+Theme: Pandora's Box
+
+ [2025/Team] GreyPixelGrabbing - 2D vertical-scroller platformer featuring a grappling hook mechanic
+ https://graymakesgame.itch.io/greypixelgrabbing
+Source code available (github)
+MonoGame C#
+Collaborated with 3 fellow students
+Three Thing Game (University of Hull private game jam) November 2025 (analytics unknown)
+Theme: Pixel Grey Grabbing (three words)
+A lonely Grey Pixel, Grabbing for survival !!
+Use your gun and grappling hook, grabbing onto broken platforms to ascend from the Hell you fell into. The only way out is up.
+
+ [2022/Team] Cooking with Papa - 3D cooking game
+ https://beetrootgames.itch.io/cooking-papa-with-meelon-pusk
+Unity C#
+Collaborated with 5 graduates (Beetroot Studios)
+Three Thing Game (University of Hull private game jam) November 2022 (analytics unknown)
+The three words were: Coal, Workshop, Candy Canes.
+Meelon Pusk has just fired 90% of all Chirper employees including the keeper of the keys, who held the keys to the kitchen. In order to keep what little of his workforce is left at Chirpers San Francisco HQ Meelon has taken to cooking meals in the workshop.
+
+ [2022/Team] Prawnageddon - 2D fighter side-scroller
+ https://beetrootgames.itch.io/prawnagedon 
+Unity C#
+Collaborated with 5 graduates (Beetroot Studios)
+Climax Game Jam in support of Mind (the charity) March 2022 (analytics unknown)
+Theme: Chain
+From the famed developers of Theresa's Naughty Campaign and Ore Gobbler comes Beetroot Studios' new and exciting project:
+Prawnageddon - A Shrimpzilla Story
+Play as the only prawn in the world who is fed up of their place in the Food CHAIN, and so attempts to fight their way out. CHAIN together attacks and dashes in order to dodge and kill oncoming predators in order to end up at the top of the food chain!* 
+Will you be able to reach the top of the pecking order?
+
+ [2021/Team] Ore Gobbler - 2D block mining game
+ https://beetrootgames.itch.io/ore-gobbler
+Unity C#
+Collaborated with 5 graduates (Beetroot Studios)
+Three Thing Game (University of Hull private game jam) November 2021 (analytics unknown)
+Theme: Turkeys, Ghosts, Sparklers
+Mine ores to make sparklers to sell for money! As as entrepreneur you strive to gain as much money as possible, but neglected to notice that you have set up camp over the graves of many miners before you. Although the corpses are valuable they contain the ghosts of the miners hell-bent on destroying you for waking them up from their slumber. Their only weakness… sparklers. You will have to balance sparkler production of protection and profit, and upgrade yourself and your sparklers so you can withstand the more valuable but more dangerous depths below.
+A hit new game from the creators of Theresa's Naughty Campaign, Robot Rumble and Hive Defence.  Beetroot Studios brings you: Ore Gobbler.
+This game is a submission to Universities of Hull Three Thing Game Jam. The three word that our game is based on are:
+Turkeys -  You are a Turkey
+Ghosts -  Watch out for fallen fellow miners
+Sparklers - Created, sold and used for self defence
+
+ [2021/Solo] Modular Mothership - 2D shooter side-scroller featuring modular space ship upgrades
+ https://seminix.itch.io/modular-mothership 
+Roguelike modular horizontal space-shooter. Join together parts to become stronger
+261 views, 121 browser plays, out of 5638 entries, ranked 1243 overall and 760 fun
+Unity C#
+GMTK 2021 jam - Theme: Joined Together
+CONTROLS:
+WSAD - Move around
+SPACE - Shoot
+To pause the game you can click off the game screen
+There's no way to restart the game other than refreshing the page, sorry :(
+HOW TO PLAY:
+Pick up guns to make yourself stronger
+Avoid enemy bullets. You can get a sense of how much damage a bullet will do by looking at its size
+
+ [2020/Solo] Spectral Ninja - 2D fighter platformer featuring a time rewind mechanic.
+ https://seminix.itch.io/spectral-ninja / https://www.newgrounds.com/portal/view/764843
+ Source code available: https://github.com/SeminixDev/Spectral-Ninja
+Brackeys Jam 2020.2 - Theme: Rewind
+Analytics: 285 views, 152 browser plays. Out of 1773 entires, ranked 331 overall, 267 fun.
+Also published on newgrounds - 1,061 views, 89 ratings 3.19/5.00
+Released: August 8th 2020
+Last updated: Jun 13, 2021
+Unity C#
+You control a ninja capable of killing enemies through the spectral dimension.
+Controls:
+[A] [D] - Move left and right
+[Space] Jump
+[L] Rewind (four seconds)
+[K] Dash (immune to damage)
+[J] Attack
+[J] [J] Double Attack
+[W] Go through door
+Alternative controls are also available and shown in the tutorial
+Instructions and help:
+You must kill at least half of the enemies to open a door that leads to the next level. Rewinding will restore 50% of the health you lost during the last four seconds.
+You do physical (normal) damage with your attacks. Your second attack and dash also do spectral damage (marked blue on the enemies' healthbar). Spectral damage can be triggered by rewinding.
+
+ [2020/Solo] Out of Sight - top-down 2D puzzle game
+ https://seminix.itch.io/out-of-sight
+Unity C#
+Release date: July 12th 2020
+Analytics: 94 views, 41 browser plays. Out of 5247 entires, ranked 1636 overall, 505 for originality.
+Short game made for the GMTK 2020 Game Jam, with the "Out of Control" theme in mind.
+Controls:
+WSAD to move
+X to interact
+Space to skip turns
+Nothing can shoot or move inside of your vision.
+
+ [2020/Solo] Space Pace: Shooter - 2D vertical-scroller shooter
+ https://seminix.itch.io/space-pace-shooter
+Unity C#
+Release date: May 6th 2020
+Fairly short "space shooter" game
+55 views, 16 browser plays (not a game jam game)

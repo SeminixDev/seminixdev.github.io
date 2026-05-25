@@ -1,0 +1,158 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+export const getStaticPaths = async () => {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+};
+
+const { project } = Astro.props;
+const { data, id } = project;
+const { Content } = await render(project);
+
+// Related posts
+const allPosts = await getCollection('posts');
+const relatedPosts = allPosts
+  .filter((p) => p.data.projectId === id)
+  .sort((a, b) => b.data.date.localeCompare(a.data.date));
+
+// Format date for display
+const formattedDate = (() => {
+  const d = new Date(data.date + '-01');
+  return d.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+})();
+
+// Build lightbox items list for client script
+const lightboxItems = [
+  ...(data.video ? [{ type: 'video', src: data.video }] : []),
+  ...data.images.map((src) => ({ type: 'image', src })),
+];
+const hasMedia = lightboxItems.length > 0;
+---
+
+<BaseLayout title={data.title} description={data.description}>
+  <!-- Hero -->
+  <header class="project-hero">
+    <div class="container">
+      <p class="project-hero__category">{data.category.toUpperCase()}</p>
+      <h1 class="project-hero__title">{data.title}</h1>
+      {data.description && <p class="project-hero__subtitle">{data.description}</p>}
+
+      <div class="project-hero__meta">
+        {data.role && <span>&#128100; {data.role}</span>}
+        {data.date && <span>&#128197; {formattedDate}</span>}
+        {data.playInBrowser && <span>✨ Play In Browser</span>}
+      </div>
+
+      {(data.skills && data.skills.length > 0 || data.tags.length > 0) && (
+        <div class="project-card__tags" style="margin-bottom:1.25rem;">
+          {data.skills && data.skills.map((skill) => <span class="skill">{skill}</span>)}
+          {data.tags.map((tag) => <span class="tag">{tag}</span>)}
+        </div>
+      )}
+
+      {Object.keys(data.links).length > 0 && (
+        <div class="project-hero__actions">
+          {Object.entries(data.links).map(([name, url], i) => (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`btn ${i === 0 ? 'btn-primary' : 'btn-outline'}`}
+            >
+              {name.charAt(0).toUpperCase() + name.slice(1)}
+            </a>
+          ))}
+        </div>
+      )}
+
+      <!-- Media gallery -->
+      {hasMedia && (
+        <div style="margin-top:2rem;">
+          <div class="media-gallery">
+            {data.video && (
+              <div
+                class="media-gallery__video-thumb"
+                role="button"
+                tabindex="0"
+                data-lightbox-index="0"
+                aria-label="Open video"
+              >
+                <span class="video-play-icon">&#9654;</span>
+                <span class="video-play-label">Watch Video</span>
+              </div>
+            )}
+            {data.images.map((src, i) => (
+              <Image
+                class="media-gallery__thumb"
+                src={src}
+                alt={`${data.title} screenshot ${i + 1}`}
+                width={880}
+                height={160}
+                loading="lazy"
+                data-lightbox-index={data.video ? i + 1 : i}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </header>
+
+  <!-- Project content (Markdown body) -->
+  <section class="container project-content">
+    <div class="prose">
+      <Content />
+    </div>
+  </section>
+
+  <!-- Related posts -->
+  {relatedPosts.length > 0 && (
+    <section class="container related-section">
+      <h2 class="section-title">// Related Posts</h2>
+      <div class="blog-grid">
+        {relatedPosts.map((post) => (
+          <BlogCard post={post} projectTitle={data.title} />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Back link -->
+  <div class="container" style="padding: 1rem 1.5rem 3rem;">
+    <a href="/projects">&larr; All Projects</a>
+  </div>
+
+  <!-- Lightbox -->
+  {hasMedia && (
+    <>
+      <script is:inline src="/scripts/lightbox.js"></script>
+      <script is:inline define:vars={{ lightboxItems }}>
+        document.addEventListener('DOMContentLoaded', function () {
+          if (typeof Lightbox !== 'undefined') {
+            Lightbox.init(lightboxItems);
+          }
+          document.querySelectorAll('[data-lightbox-index]').forEach(function (el) {
+            var idx = parseInt(el.getAttribute('data-lightbox-index') ?? '0', 10);
+            function open() { if (typeof Lightbox !== 'undefined') Lightbox.open(idx); }
+            el.addEventListener('click', open);
+            el.addEventListener('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+            });
+          });
+        });
+      </script>
+    </>
+  )}
+</BaseLayout>
