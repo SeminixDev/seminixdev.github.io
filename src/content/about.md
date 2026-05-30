@@ -1,22 +1,24 @@
 ---
 ---
-# About Me
+# // About Me
 
-I'm Piotr, a games programmer and software engineer with a First-Class Honours MEng in Computer Science for Games Programming from the University of Hull.
+Hi there, I'm Piotr (aka. Peter). I like to make games & software.
 
-I'm drawn to the low-level side of games development — rendering pipelines, physics simulation, multithreaded architecture — but I'm equally at home building game mechanics and shipping playable experiences under jam constraints.
+## My Journey
 
-## Background
+I was interested in computers for as long as I can remember. Computer science became my favourite subject as soon as it was introduced to me in primary school. I was enchanted by the Windows XP era programs and dreamed of making my own stuff.
 
-[Write a paragraph or two about your background — how you got into programming, what path led you here, anything that gives context to your work.]
+Early on, this dream manifested itself through [Sploder](https://lostmediawiki.com/Sploder.com_(partially_lost_games_from_Flash_website;_2007-2025)), an online website which made game creation and publication accessible without any programming knowledge. As Minecraft became more popular, I dabbled in making my own Minecraft servers & modifying plugins. I also released a couple of tutorials on server commands on YouTube, one amassing 500k views.
 
-## Game Jams
+In computer science classes, the praise I received from my teachers and peers continued to spur my passion further. During high-school and college, I learnt a lot about how computers work (history, hardware, software, operating systems, networking, etc.). I created an array of small projects, ranging from a maze game in PowerPoint, a book store website, to an application for ordering pizzas with differnt toppings. 
 
-Game jams are where a lot of my best learning has happened. I've competed in GMTK (2020, 2021), Brackeys Jam (2020.2), Climax Game Jam, Three Thing Game (2021, 2025), and Arcademia Jam 2026 — usually solo, sometimes with teams. The time pressure forces clean decision-making and ships things.
+When the pandemic happened, I completed an online Unity3D course. During this time, I learned more advanced concepts, including source control, object-oriented programming, and composition. This also led me to the discovery of game jams - really fun game making competitions. You can view all of the different games I've made as a result on my <a href="/projects">Projects</a> page, or directly on [Itch](https://seminix.itch.io/).
 
-## Outside of Code
+So far, university was my most rewarding period on my learning journey. My strong foundation in computer science allowed to me to excel in most modules; one year, I got an award for achieving the best performance on my course. University gave me a space to dive deep into concepts I only had shallow knowledge of before. For the first time, I took opportunities to develop projects as part of a team.
 
-[Optional: one or two lines about interests outside programming — makes the page feel human.]
+In my final year, I designed and developed a distributed <a href="/projects/modularender">ModulaRender</a>, a real-time physics simulation engine over the course of three different modules. The "dissertation" module itself was instead a hands-on one, where I worked in a team following Agile & DevOps practices such as sprints, estimation, CI/CD, and pair programming, improving an already existing legacy codebase of Troublesome Tanks.
+
+*To be continued...*
 
 ## Get in Touch
 
