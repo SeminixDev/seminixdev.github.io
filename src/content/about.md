@@ -4,6 +4,8 @@
 
 Hi there, I'm Piotr (aka. Peter). I like to make games & software.
 
+I am currently looking for entry-level software/game developer positions. Please contact me on [LinkedIn](https://www.linkedin.com/in/moskala-piotr/) if you would like to let me know of an opportunity!
+
 ## My Journey
 
 I was interested in computers for as long as I can remember. Computer science became my favourite subject as soon as it was introduced to me in primary school. I was enchanted by the Windows XP era programs and dreamed of making my own stuff.
