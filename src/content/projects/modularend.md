@@ -1,5 +1,5 @@
 ---
-title: ModulaRender
+title: ModulaRend
 description: A distributed real-time physics simulation engine and renderer built from scratch in C++ & Vulkan 1.3. 
 skills: [C++, Vulkan, Multithreading, Physics, Networking]
 tags: [GPU Compute, CMake]
@@ -9,7 +9,7 @@ date: "2026-05"
 images: ["/assets/projects/mr3.png", "/assets/projects/mr4.png", "/assets/projects/mr1.png", "/assets/projects/mr2.png"]
 video: ""
 links:
-  github: https://github.com/SeminixDev/ModulaRender
+  github: https://github.com/SeminixDev/ModulaRend
 featured: true
 ---
 
