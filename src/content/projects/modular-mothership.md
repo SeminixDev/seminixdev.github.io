@@ -4,6 +4,7 @@ description: "Roguelike horizontal space shooter where you assemble your ship fr
 skills: [Unity, C#]
 tags: [Game Jam, 2D, Action, Shooter, Roguelike]
 category: game
+playInBrowser: true
 role: Solo
 date: "2021-06"
 images: ["/assets/projects/mm1.png", "/assets/projects/mm2.png"]

@@ -4,6 +4,7 @@ description: "2D fighter side-scroller where you play as a prawn fighting to esc
 skills: [Unity, C#]
 tags: [Game Jam, 2D, Action, Fighter, Side-Scroller]
 category: game
+playInBrowser: true
 role: Programmer (team of 6, Beetroot Studios)
 date: "2022-03"
 images: ["/assets/projects/prawn1.png", "/assets/projects/prawn2.png", "/assets/projects/prawn3.png"]

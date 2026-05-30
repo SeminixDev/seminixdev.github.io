@@ -4,6 +4,7 @@ description: "3D cooking chaos game where a tech mogul cooks meals in a workshop
 skills: [Unity, C#]
 tags: [Game Jam, 3D, Cooking]
 category: game
+playInBrowser: true
 role: Programmer (team of 6, Beetroot Studios)
 date: "2022-11"
 images: ["/assets/projects/cwp1.png", "/assets/projects/cwp2.png", "/assets/projects/cwp3.png", "/assets/projects/cwp4.png", "/assets/projects/cwp5.png"]
