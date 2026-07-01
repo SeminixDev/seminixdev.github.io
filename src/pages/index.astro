@@ -3,23 +3,13 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import BlogCard from '../components/BlogCard.astro';
 
 const allProjects = await getCollection('projects');
-const allPosts    = await getCollection('posts');
 
 // Featured projects, sorted newest first
 const featured = allProjects
   .filter((p) => p.data.featured)
   .sort((a, b) => b.data.date.localeCompare(a.data.date));
-
-// Latest 3 posts
-const latestPosts = allPosts
-  .sort((a, b) => b.data.date.localeCompare(a.data.date))
-  .slice(0, 3);
-
-// Build project title lookup for blog cards
-const projectMap = Object.fromEntries(allProjects.map((p) => [p.id, p.data.title]));
 ---
 
 <BaseLayout
@@ -65,23 +55,6 @@ const projectMap = Object.fromEntries(allProjects.map((p) => [p.id, p.data.title
     <p style="margin-top:1.25rem;"><a href="/projects">View all projects &rarr;</a></p>
   </section>
 
-  <!-- Latest Posts -->
-  <section class="container" style="padding-top:0;">
-    <h2 class="section-title">// Latest Posts</h2>
-    {latestPosts.length > 0 ? (
-      <div class="blog-grid">
-        {latestPosts.map((post) => (
-          <BlogCard
-            post={post}
-            projectTitle={post.data.projectId ? projectMap[post.data.projectId] : undefined}
-          />
-        ))}
-      </div>
-    ) : (
-      <p class="no-projects">No posts yet — check back soon!</p>
-    )}
-    <p style="margin-top:1.25rem;"><a href="/blog">View all posts &rarr;</a></p>
-  </section>
 
   <!-- Carousel initialisation -->
   <script is:inline src="/scripts/carousel.js"></script>
