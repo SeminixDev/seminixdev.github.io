@@ -44,7 +44,7 @@ Cross-peer collisions use a **collision arbitration protocol**: the peer whose e
 
 ## Rigid Body Physics
 
-Full rigid body simulation: **semi-implicit Euler** integration (energy-conservative for oscillatory systems), analytically-computed inertia tensors rotated per-frame via `R · I⁻¹_local · Rᵀ`, Coulomb friction clamped to the friction cone, and impulse-based collision response with angular effects (`ωA += IA⁻¹ (rA × jn)`).
+Full rigid body simulation: **semi-implicit Euler** integration (energy-conservative for oscillatory systems), analytically-computed inertia tensors rotated per-frame via `R · I⁻¹_local · Rᵀ`, Coulomb friction clamped to the friction cone, and impulse-based collision response with angular effects (`ωA += IA⁻¹ (rA × jn)`). The simulation can handle 750+ spheres at 60fps on a low-budget PC.
 
 A **collision dispatch table** maps ordered type pairs to function pointers for O(1) lookup, covering 14 collision pair types including 15-axis SAT for Cuboid–Cuboid. Container objects invert the collision normal to constrain bodies to their interior. Animated objects use backward finite-difference velocity so moving surfaces are handled correctly in the impulse solver.
 
@@ -57,4 +57,4 @@ Two acceleration structures implement a common `ISpatialPartition` interface, sw
 - **Uniform Grid** — O(N) build, O(K) query by hashing boid positions into cells of side = query radius
 - **Octree** — O(N log N) build, pool-allocated nodes to avoid heap fragmentation
 
-Live performance metrics — build/query time, memory, result count — are captured via `high_resolution_clock` and displayed in ImGui for direct comparison between structures.
+Live performance metrics — build/query time, memory, result count — are captured via `high_resolution_clock` and displayed in ImGui for direct comparison between structures. The simulation can handle 2500+ boids at 60fps on a low-budget PC.

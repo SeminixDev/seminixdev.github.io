@@ -7,11 +7,11 @@ category: game
 playInBrowser: true
 role: Solo
 date: "2021-06"
-images: ["/assets/projects/mm1.png", "/assets/projects/mm2.png"]
+images: ["/assets/projects/mm1.png", "/assets/projects/mm2.png", "/assets/projects/mm3.png", "/assets/projects/mm4.png"]
 video: ""
 links:
   itch: https://seminix.itch.io/modular-mothership
-featured: false
+featured: true
 ---
 
 **GMTK Game Jam 2021** Entry

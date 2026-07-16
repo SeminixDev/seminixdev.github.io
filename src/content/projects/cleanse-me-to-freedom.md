@@ -6,7 +6,7 @@ tags: [Game Jam, 3D, Shooter, Twin-Stick]
 category: game
 role: Programmer (team of 2)
 date: "2026-03"
-images: ["/assets/projects/cmtf1.png"]
+images: ["/assets/projects/cmtf1.png", "/assets/projects/cmtf2.png", "/assets/projects/cmtf3.png"]
 video: ""
 links:
   itch: https://usagidvv.itch.io/cleansemetofreedom

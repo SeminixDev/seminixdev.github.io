@@ -6,11 +6,11 @@ tags: [Game Jam, 2D, Action, Platformer]
 category: game
 role: Programmer (team of 4)
 date: "2025-11"
-images: ["/assets/projects/gpg1.png"]
+images: ["/assets/projects/gpg1.png", "/assets/projects/gpg2.png", "/assets/projects/gpg3.png", "/assets/projects/gpg4.png"]
 video: ""
 links:
   itch: https://graymakesgame.itch.io/greypixelgrabbing
-featured: false
+featured: true
 ---
 
 **Three Thing Game** (November 2025) Entry
