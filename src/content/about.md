@@ -18,7 +18,7 @@ When the pandemic happened, I completed an online Unity3D course. During this ti
 
 So far, university was my most rewarding period on my learning journey. My strong foundation in computer science allowed to me to excel in most modules; one year, I got an award for achieving the best performance on my course. University gave me a space to dive deep into concepts I only had shallow knowledge of before. For the first time, I took opportunities to develop projects as part of a team.
 
-In my final year, I designed and developed a distributed <a href="/projects/modularend">ModulaRend</a>, a real-time physics simulation engine over the course of three different modules. The "dissertation" module itself was instead a hands-on one, where I worked in a team following Agile & DevOps practices such as sprints, estimation, CI/CD, and pair programming, improving an already existing legacy codebase of Troublesome Tanks.
+In my final year, I designed and developed a distributed <a href="/projects/modularend">ModulaRend</a>, a real-time physics simulation engine over the course of three different modules. The "dissertation" module itself was instead a hands-on one, where I worked in a team following Agile & DevOps practices such as sprints, estimation, CI/CD, and pair programming, improving an already existing legacy codebase of <a href="/projects/troublesome-tanks">Troublesome Tanks</a>.
 
 *To be continued...*
 

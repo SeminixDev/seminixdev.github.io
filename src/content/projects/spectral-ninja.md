@@ -10,8 +10,8 @@ date: "2020-08"
 images: ["/assets/projects/sn1.png", "/assets/projects/sn2.png", "/assets/projects/sn3.png", "/assets/projects/sn4.png"]
 video: ""
 links:
-  itch: https://seminix.itch.io/spectral-ninja
   github: https://github.com/SeminixDev/Spectral-Ninja-Public
+  itch: https://seminix.itch.io/spectral-ninja
   newgrounds: https://www.newgrounds.com/portal/view/764843
 featured: true
 ---
