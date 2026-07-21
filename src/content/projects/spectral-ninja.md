@@ -11,7 +11,7 @@ images: ["/assets/projects/sn1.png", "/assets/projects/sn2.png", "/assets/projec
 video: ""
 links:
   itch: https://seminix.itch.io/spectral-ninja
-  github: https://github.com/SeminixDev/Spectral-Ninja
+  github: https://github.com/SeminixDev/Spectral-Ninja-Public
   newgrounds: https://www.newgrounds.com/portal/view/764843
 featured: true
 ---

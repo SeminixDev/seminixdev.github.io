@@ -10,6 +10,7 @@ date: "2021-06"
 images: ["/assets/projects/mm1.png", "/assets/projects/mm2.png", "/assets/projects/mm3.png", "/assets/projects/mm4.png"]
 video: ""
 links:
+  github: https://github.com/SeminixDev/Modular-Mothership-Public
   itch: https://seminix.itch.io/modular-mothership
 featured: true
 ---
